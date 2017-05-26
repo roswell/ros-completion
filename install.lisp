@@ -86,6 +86,8 @@
 
 (defun add-to-init-file (&optional (shell (login-shell)))
   (format t "install completion for ~A~%" shell)
-  (find shell *supported-shell* :test 'string-equal))
+  (let ((func (find shell *supported-shell* :test 'string-equal)))
+    (when func
+      (funcall func))))
 
 (setf roswell.install:*build-hook* 'add-to-init-file)
