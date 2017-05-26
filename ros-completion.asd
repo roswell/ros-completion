@@ -3,4 +3,5 @@
   :author "SANO Masatoshi"
   :license "MIT"
   :description "install roswell completion"
-  :long-description "install roswell completion")
+  :long-description "install roswell completion"
+  :components ((:file "install")))
